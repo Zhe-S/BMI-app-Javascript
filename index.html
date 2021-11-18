@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BMI App</title>
+</head>
+
+<body>
+    <h1>BMI Rechner</h1>
+    <div class="container">
+        <div class="row">
+            <input type="range" min="20" max="200" value="20" id="weight" oninput="calculate()">
+            <span id="weight-val">20 kg</span>
+        </div>
+        <div class="row">
+            <input type="range" min="100" max="250" value="100" id="height" oninput="calculate()">
+            <span id="height-val">100 cm</span>
+        </div>
+    </div>
+
+    <div class="bmivalue">
+        <p id="result">20.0</p>
+    </div>
+
+    <div class="info">
+        <h3>Einordnung Ihres Body-Mass-Index</h3>
+        <ul>
+            <li>
+                <article>
+                    <div class="bmiValueDiv">
+                        <span class="infovalue">&lt; 18.5</span>
+                    </div>
+                    <h3 class="zustand">Untergewicht</h3>
+                    <p>
+                        Ihr Gewicht ist im Verhältnis zu Ihrer Körpergröße sehr niedrig. Idealerweise sollten Sie etwas
+                        zunehmen, um auf lange Sicht gesund und leistungsfähig zu bleiben. Lesen Sie jetzt unser Tipps
+                        zur richtigen Ernährung, um fit zu bleiben.
+                    </p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <div class="bmiValueDiv">
+                        <span class="infovalue">18.5 - 24.9</span>
+                    </div>
+                    <h3 class="zustand">Normalgewicht</h3>
+                    <p>
+                        Das BMI zeigt bei Ihnen ein gesundes Verhältnis von Größe zu Gewicht an. Mit ausgewogener
+                        Ernährung und regelmäßiger Bewegung bleibt das auch langfristig so. Mit nur einem Klick zu den
+                        Infos für einen gesunden Lebensstil. </p>
+
+                </article>
+            </li>
+            <li>
+                <article>
+                    <div class="bmiValueDiv">
+                        <span class="infovalue">&gt; 25</span>
+                    </div>
+                    <h3 class="zustand">Übergewicht</h3>
+                    <p>
+                        Laut Body-Mass-Index sind Sie übergewichtig. Dies erhöht das Risiko von Krankheiten wie z. B.
+                        Diabetes. Auf dem Weg zu weniger Kilos unterstützen wir Sie mit Angeboten zum Abnehmen.
+                    </p>
+                </article>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
